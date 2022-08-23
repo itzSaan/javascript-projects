@@ -1,2 +1,3 @@
 # javascript-projects
-JavaScript-projects
+All my JavaScript-projects are here.
+Trying to do my best.
