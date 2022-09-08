@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <title>Digital Clock</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: rgb(0, 0, 0);
+            background-image: url(wall.jpg);
+            background-position: center center;
+            background-size: cover;
+            font-family: 'Share Tech Mono', monospace;
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-content: center;
+        }
+        .clock{
+            color: rgba(255, 255, 255, 0.788);
+            font-size: 20vh;
+            text-shadow: 2px 2px 8px #000000;
+        }
+    </style>
+</head>
+<body>
+    <div id="DigitalClock" class="clock"></div>
+    <script>
+        function showTime(){
+            var date = new Date();
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+            var session = 'AM'
+            const DigitalClock = document.getElementById('DigitalClock');           
+
+            h = (h == 0) ? h = 12 : h; 
+            if(h > 12){
+                h-=12;
+                session = 'PM'
+            }
+            h = (h < 10) ? '0' + h : h;
+            m = (m < 10) ? '0' + m : m;
+            s = (s < 10) ? '0' + s : s;
+
+            DigitalClock.innerHTML = `${h}:${m}:${s} ${session}`;
+
+            setTimeout(showTime, 1000);
+        }
+        
+        showTime();
+    </script>
+</body>
+</html>
