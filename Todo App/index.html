@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>ToDo App | Vanilla JS Project</title>
+  <meta name="description" content="to-do apps that will help you get more done at work by easily managing and keeping track of your tasks">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- FONT Awesome
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/app.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row header">     
+        <h4 class="app--heading">ToDo App</h4>        
+        <button id="createNewTodo" class="create-new-btn btn">          
+          <img src="images/add.png" width="20px" alt=""> <span>Add new</span>
+        </button>   
+      </div>
+      
+      <div id="todosContainer" class="row todo-container">
+       
+      </div>
+      <div id="modal" class="modal">
+        <form id="form">
+            <h5>Create ToDo</h5>
+            <hr class="divider">
+            <label for="exampleEmailInput">ToDo Name</label>
+            <input id="todoInput" class="u-full-width" type="text" placeholder="eg. Learning" id="exampleEmailInput">
+            <span id="alert"></span>          
+            <label for="exampleMessage">Details <small>(Optional)</small></label>
+            <textarea id="todoDescription" class="u-full-width" placeholder="eg. Online Class" id="exampleMessage"></textarea>       
+            <label for="exampleRecipientInput">ToDo Status</label>
+            <select id="todoStatus" class="u-full-width" id="exampleRecipientInput">
+              <option selected value="">Select an option</option>
+              <option value="Todo">ToDo</option>
+              <option value="Complete">Complete</option>
+            </select>
+        <button id="createNew" type="submit" class="button-primary">Create TODO</button>
+        <button id="cancel" type="reset"  class="button">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <script type="" src="App.js"></script>
+</body>
+</html>
