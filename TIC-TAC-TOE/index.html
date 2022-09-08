@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo-xo.svg" type="image/x-icon">
+    <title>Tic Tac Toe game | HTML | CSS | JS |</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="wrap">            
+            <div class="tic-tac-wrap">
+                <div class="col logo">
+                    <img src="img/logo-xo.svg" class="logo-img" alt="XO" width="54">
+                </div>
+                <div class="col">
+                    <span class="turn">
+                        <!-- <img class="player" src="img/x-small.svg" alt="X" width="14"> <b>TURN</b> -->
+                    </span>
+                </div>
+                <div class="col">
+                    <button class="btn reset-btn">
+                        <img src="img/reset.png" width="20" alt="">
+                    </button>
+                </div>
+                <button class="tic-tac-btn"></button>
+                <button class="tic-tac-btn"></button>
+                <button class="tic-tac-btn"></button>
+                <button class="tic-tac-btn"></button>
+                <button class="tic-tac-btn"></button>
+                <button class="tic-tac-btn"></button>
+                <button class="tic-tac-btn"></button>
+                <button class="tic-tac-btn"></button>
+                <button class="tic-tac-btn"></button>
+                <span class="result bg-mint">
+                    <small>X (YOU)</small>
+                    <h4 id="xWonCount"></h4>
+                </span>
+                <span class="result bg-white">
+                    <small>TIES</small>
+                    <h4 id="tiesCount"></h4>
+                </span>
+                <span class="result bg-yellow">
+                    <small>O (CPU)</small>
+                    <h4 id="oWonCount"></h4>
+                </span>
+            </div>            
+        </div>
+
+        <div id="modal" class="modal-container">
+            <div class="modal">
+                <h1 class="won" style="font-size: 1.2rem; margin: 0;">YOU WON!</h1>
+                <h1 class="result-text">                    
+                        <img src="img/X.svg" alt="">
+                        TAKES THE ROUND
+                </h1>
+                <div class="btn-wrap">
+                    <button class="btn quit-btn">QUIT</button>
+                    <button class="btn next-btn">NEXT ROUND</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
