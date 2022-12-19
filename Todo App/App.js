@@ -53,7 +53,7 @@ let formValidation = () => {
 }
 
 let storeTodo = () => {
-    todos.push({
+    todos.unshift({
         title: todoInput.value,
         status: todoStatus.value === "Complete" ? true : false,
         details: todoDescription.value
